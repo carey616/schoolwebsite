@@ -12,7 +12,7 @@
   }
   
   /* Header */
-  header {
+ /* header {
     background: #004080;
     color: white;
     padding: 1rem 2rem;
@@ -66,7 +66,149 @@
     display: none;
     font-size: 2rem;
     cursor: pointer;
+  }*/
+/* Responsive Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 2em;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.school-name {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #333;
+  white-space: nowrap;
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.school-logo {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.navbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-right li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-right li a:hover {
+  color: #007bff;
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 0.5em;
+  margin-left: 0.5em;
+}
+
+/* Mobile Styles */
+@media (max-width: 850px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 0.5em 1em;
   }
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    flex: 0 0 100%;
+    justify-content: center;
+    margin: 0;
+  }
+  .navbar-left {
+    order: 1;
+    justify-content: flex-start;
+  }
+  .navbar-center {
+    order: 2;
+    justify-content: center;
+    margin-bottom: 0.5em;
+  }
+  .navbar-right {
+    order: 4;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #03457c;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 1em 0;
+    gap: 1.5em;
+  }
+  .navbar-right.open {
+    display: flex;
+    animation: fadeInDown 0.3s;
+  }
+  .navbar-right li a {
+    color: #222;
+    font-size: 1.3em;
+    display: block;
+    padding: 0.5em 2em;
+    color: #fff;
+    text-align: center;
+  }
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1001;
+    color: #fff;
+    background: #03457c;
+    border-radius: 3px;
+    border: none;
+  }
+  .navbar {
+    background: #03457c;
+  }
+  .school-name {
+    color: #fff;
+  }
+}
+
+/* Hamburger animation, optional */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: none;}
+}
   
   /* Hero Section */
   .hero {
