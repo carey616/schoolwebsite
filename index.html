@@ -9,6 +9,41 @@
 </head>
 <body>
 
+<header>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <span class="school-name">🌞 Sunrise Primary</span>
+    </div>
+    <div class="navbar-center">
+      <img src="logo1.jpeg" alt="School Logo" class="school-logo">
+    </div>
+    <ul class="navbar-right nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="term-dates.html">Term-Dates</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </nav>
+</header>
+<script>
+  // Hamburger Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('open');
+  });
+  // Optional: close menu when clicking outside or on a link (for better mobile UX)
+  document.addEventListener('click', function(e) {
+    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove('open');
+    }
+  });
+  navLinks.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => navLinks.classList.remove('open'))
+  );
+</script>
   <section class="hero">
     <h1 class="fade-in">Welcome to Sunrise Primary School</h1>
     <p class="slide-in">Empowering learners with knowledge and values for life.</p>
