@@ -89,7 +89,7 @@
 .school-name {
   font-weight: bold;
   font-size: 1.3em;
-  color: #333;
+  color: white;
   white-space: nowrap;
 }
 
@@ -119,7 +119,7 @@
 
 .navbar-right li a {
   text-decoration: none;
-  color: #333;
+  color: white;
   font-weight: 500;
   transition: color 0.2s;
 }
