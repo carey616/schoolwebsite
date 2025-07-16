@@ -27,23 +27,7 @@
     <div class="menu-toggle" id="menuToggle">&#9776;</div>
   </nav>
 </header>
-<script>
-  // Hamburger Menu Toggle
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-  menuToggle.addEventListener('click', function() {
-    navLinks.classList.toggle('open');
-  });
-  // Optional: close menu when clicking outside or on a link (for better mobile UX)
-  document.addEventListener('click', function(e) {
-    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
-      navLinks.classList.remove('open');
-    }
-  });
-  navLinks.querySelectorAll('a').forEach(a =>
-    a.addEventListener('click', () => navLinks.classList.remove('open'))
-  );
-</script>
+
   <section class="hero">
     <h1 class="fade-in">Welcome to Sunrise Primary School</h1>
     <p class="slide-in">Empowering learners with knowledge and values for life.</p>
