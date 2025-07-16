@@ -12,7 +12,7 @@
   }
   
   /* Header */
- /* header {
+  header {
     background: #004080;
     color: white;
     padding: 1rem 2rem;
@@ -21,7 +21,7 @@
     align-items: center;
     flex-wrap: wrap;
   }
-  
+  /*
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
